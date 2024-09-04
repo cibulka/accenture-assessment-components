@@ -1,0 +1,117 @@
+/* Root */
+
+.root {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+/* Components */
+
+/*
+NOTE: Input must be hidden only visually, so it does not break accessive technologies.
+*/
+.input {
+  appearance: none;
+  background-color: transparent;
+  margin: 0;
+}
+
+.icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  /* TODO: Sizes should be in theme */
+  width: 24px;
+  /* TODO: Sizes should be in theme */
+  height: 24px;
+  /* TODO: Border-radius should be in theme */
+  border-radius: 2px;
+}
+
+.icon svg {
+  /* TODO: Sizes should be in theme */
+  width: 16px;
+  /* TODO: Colors should be in theme */
+  fill: #ffffff;
+}
+
+/* States */
+
+.input:not(:checked) ~ .icon-unchecked,
+.input:checked ~ .icon-checked,
+.input:indeterminate ~ .icon-indeterminate {
+  display: flex;
+}
+
+.input:indeterminate ~ .icon-checked,
+.input:indeterminate ~ .icon-unchecked {
+  display: none;
+}
+
+.input:focus ~ .icon {
+  outline: solid 2px;
+  outline-offset: 2px;
+}
+
+/* Variant: Unchecked */
+
+.icon-unchecked {
+  background: #464748;
+}
+.icon-unchecked:before {
+  content: "";
+  /* TODO: Sizes should be in theme */
+  width: 20px;
+  /* TODO: Sizes should be in theme */
+  height: 20px;
+  /* TODO: Colors should be in theme */
+  background: #ffffff;
+}
+.root:hover .icon-unchecked:before {
+  /* TODO: Colors should be in theme */
+  background: #e5e5e5;
+}
+
+/* Variant: Checked */
+
+.icon-checked,
+.icon-indeterminate {
+  /* TODO: Colors should be in theme */
+  background: #419468;
+}
+
+.root:not(.root-error):not(.root-disabled):hover .icon-checked,
+.root:not(.root-error):not(.root-disabled):hover .icon-indeterminate {
+  /* TODO: Colors should be in theme */
+  background: #59bc87;
+}
+
+/* Disabled */
+
+.root-disabled {
+  /* TODO: Colors should be in theme */
+  color: #9e9fa0;
+}
+
+.root-disabled .icon-unchecked,
+.root-disabled .icon-checked,
+.root-disabled .icon-indeterminate {
+  /* TODO: Colors should be in theme */
+  background: #9e9fa0;
+}
+
+/* Error */
+
+.root-error {
+  /* TODO: Colors should be in theme */
+  color: #dc1111;
+}
+
+.root-error .icon-unchecked,
+.root-error .icon-checked,
+.root-error .icon-indeterminate {
+  /* TODO: Colors should be in theme */
+  background: #dc1111;
+}

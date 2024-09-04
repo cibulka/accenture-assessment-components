@@ -1,0 +1,12 @@
+.button {
+  background: transparent;
+}
+.button[disabled] {
+  color: #c4c6c7;
+}
+.button:not([disabled]):hover {
+  color: #e5e5e5;
+}
+.button:focus {
+  outline: solid 2px;
+}

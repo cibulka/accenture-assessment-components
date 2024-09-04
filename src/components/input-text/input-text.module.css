@@ -1,0 +1,33 @@
+.root {
+  position: relative;
+}
+
+.has-placeholder {
+  position: relative;
+}
+
+.input {
+  /* TODO: Colors should be in theme */
+  background: #e5e5e5;
+  /* TODO: Sizes should be in theme */
+  padding: 8px;
+}
+
+.has-placeholder .input:not([value=""]) {
+  padding: 12px 8px 4px 8px;
+}
+
+.placeholder {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  /* TODO: Sizes should be in theme */
+  padding: 8px;
+}
+
+.input:focus ~ .placeholder,
+.input:not([value=""]) ~ .placeholder {
+  top: -6px;
+  font-size: 0.66em;
+}

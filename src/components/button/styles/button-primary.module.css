@@ -1,0 +1,20 @@
+.button {
+  /* TODO: Colors should be in theme */
+  background: #78faae;
+}
+
+.button[disabled] {
+  /* TODO: This color should be in theme */
+  background: #d8d8d8;
+  /* TODO: This color should be in theme OR handled through opacity */
+  color: #9e9fa0;
+}
+
+.button:not([disabled]):hover {
+  /* TODO: This color should be in theme */
+  background: #a8ffcc;
+}
+
+.button:focus {
+  outline: solid 2px;
+}

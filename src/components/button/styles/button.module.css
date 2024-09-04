@@ -1,0 +1,53 @@
+/* Root */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: bold;
+  /* TODO: Border-radius should in theme */
+  border-radius: 50px;
+  /* TODO: Sizes should in theme */
+  padding: 14px 24px;
+  /* TODO: This color is standard body text */
+  color: #161718;
+  transition: transform 0.1s ease;
+  transform: scale(1);
+}
+
+.button[disabled] {
+  cursor: not-allowed;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+.button svg {
+  fill: currentColor;
+}
+
+/* Components */
+
+.icon {
+  /* TODO: Sizes should in theme */
+  width: 24px;
+  height: 24px;
+}
+
+/* Features */
+
+.has-icon {
+  /* TODO: Sizes should in theme */
+  padding: 10px 24px;
+}
+
+.has-icon-only {
+  padding: 10px;
+}
+
+.is-full-width {
+  display: flex;
+  width: 100%;
+}
