@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react(), libInjectCss(), dts()],
   build: {
     lib: {
-      entry: path.resolve(process.cwd(), "src/main.tsx"),
+      entry: path.resolve(process.cwd(), "src/main.ts"),
       name: "accenture-assessment-components",
       fileName: "main",
     },

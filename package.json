@@ -7,11 +7,11 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "prepare": "tsc && vite build",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest --coverage",
-    "prepare": "tsc && vite build"
+    "test": "vitest --coverage"
   },
   "dependencies": {
     "react": "^18.3.1",
