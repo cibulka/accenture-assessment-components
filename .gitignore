@@ -25,6 +25,5 @@ dist-ssr
 
 # Custon
 coverage
-.storybook
 storybook-static
 .vite
