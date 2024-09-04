@@ -1,6 +1,6 @@
 {
   "name": "accenture-assessment-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "./dist/main.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "test": "vitest --coverage"
+    "test": "vitest --coverage",
+    "prepare": "tsc && vite build"
   },
   "dependencies": {
     "react": "^18.3.1",
