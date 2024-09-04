@@ -1,7 +1,6 @@
 {
   "name": "accenture-assessment-components",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -47,6 +46,8 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.1.0",
+    "vite-plugin-lib-inject-css": "^2.1.1",
     "vitest": "^2.0.5"
   },
   "eslintConfig": {

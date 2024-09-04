@@ -3,6 +3,9 @@ import { InputTextProps } from "./types";
 import { useId } from "react";
 import styles from "./input-text.module.css";
 
+/**
+ * Text input for forms (rough version).
+ */
 export const InputText = ({ className, placeholder, value, onChange }: InputTextProps) => {
   const inputId = useId();
   return (

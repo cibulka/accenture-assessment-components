@@ -1,10 +1,3 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+export { Button } from "./components/button";
+export { Checkbox } from "./components/checkbox";
+export { InputText } from "./components/input-text";

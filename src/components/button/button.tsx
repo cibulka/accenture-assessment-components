@@ -20,13 +20,6 @@ import styles from "./styles/button.module.css";
  *
  * - Disabled state would be achieve more flexibly through opacity than a fixed set of colors
  * - Missing dark/light mode context (relevant for secondary button)
- *
- * ## TODO:
- *
- * - [x] outline state
- * - [x] focus state for each variant
- * - [x] pressed/active state
- * - [ ] tests
  */
 export function Button({
   children,
