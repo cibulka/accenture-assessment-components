@@ -27,3 +27,4 @@ dist-ssr
 coverage
 .storybook
 storybook-static
+.vite
