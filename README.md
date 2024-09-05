@@ -1,50 +1,91 @@
-# React + TypeScript + Vite
+# Accenture-ui
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center" className="flex justify-center items-center gap-4">
+  <a aria-label="NPM package" href="https://npmjs.com/accenture-assessment-components">
+    <img src="https://img.shields.io/badge/NPM_package-black?logo=NPM&labelColor=black" />
+  </a>
+  <a aria-label="React" href="https://react.dev/">
+    <img src="https://img.shields.io/badge/React-black?logo=React&labelColor=black" />
+  </a>
+  <a aria-label="Storybook" href="https://storybook.js.org/">
+    <img src="https://img.shields.io/badge/Storybook-black?logo=storybook&labelColor=black" />
+  </a>
+  <a aria-label="Vite" href="https://vitejs.dev/">
+    <img src="https://img.shields.io/badge/Vite-black?logo=vite&labelColor=black" />
+  </a>
+  <a aria-label="Vitest" href="https://vitest.dev/">
+    <img src="https://img.shields.io/badge/Vitest-black?logo=vitest&labelColor=black" />
+  </a>
+  <a aria-label="TypeScript" href="https://www.typescriptlang.org/">
+    <img src="https://img.shields.io/badge/TypeScript-black?logo=TypeScript&labelColor=black" />
+  </a>
+  <a aria-label="My resumé" href="https://www.cibulka.codes/cv.pdf">
+    <img src="https://img.shields.io/badge/Download_my_resumé!-blue" />
+  </a>
+</div>
 
-Currently, two official plugins are available:
+<br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="https://accenture-ui.cibulka.codes/cover.png" />
 
-## Expanding the ESLint configuration
+<br />
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## What is this?
 
-- Configure the top-level `parserOptions` property like this:
+This repository serves as a proof of concept for a design system that aims to streamline development and ensure consistency across various front-end platforms. As part of an interview assessment, this system demonstrates a potential approach to expanding and innovating an existing design system to accommodate multiple devices. While this is a starting point, it highlights the feasibility of creating a centralized hub for reusable components and guidelines.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- See it in action: [accenture-ui.cibulka.codes](https://accenture-ui.cibulka.codes)
+- Browse the presentation: [accenture.cibulka.codes](https://accenture.cibulka.codes)
+
+## Features
+
+- **NPM Package**: The design system is packaged as an NPM module for easy integration into projects.
+- **Storybook**: A development environment for visualizing and interacting with components in isolation, facilitating testing and documentation.
+- **Unit Tests**: Automated tests verify the correctness and functionality of components, ensuring quality and reliability.
+- **Cross-Platform Compatibility**: The design system is designed to adapt seamlessly to different platforms, including mobile, desktop, in-car HMI, smart home devices, and wearables.
+
+## Benefits
+
+- **Efficiency**: Reduces development time by providing pre-built components.
+- **Consistency**: Maintains a unified look and feel across all platforms.
+- **Usability**: Ensures a consistent user experience.
+- **Innovation**: Supports the creation of innovative and engaging interfaces.
+
+## How to use
+
+### Integrate to project
+
+```
+import { Button } from 'accenture-assessment-components';
+
+export function App() {
+  return <Button>My button</Button>
+}
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Use localy
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Clone the repository, install dependencies and launch.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```
+git clone https://github.com/cibulka/accenture-assessment-components
+cd accenture-assessment-components
+npm install
+npm run dev
+```
+
+#### Run Storybook
+
+Storybook will launch on a local port. You can also see the [demo online](https://accenture-ui.cibulka.codes).
+
+```
+npm run storybook
+```
+
+#### Run tests
+
+Tests will generate coverage report both in terminal, as well as in a static HTML build in `/coverage/index.html`.
+
+```
+npm run test
 ```
