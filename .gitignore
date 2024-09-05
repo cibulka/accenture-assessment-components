@@ -23,7 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# Custon
+# Custom
 coverage
 storybook-static
 .vite
+tsconfig.app.tsbuildinfo

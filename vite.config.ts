@@ -5,7 +5,15 @@ import { libInjectCss } from "vite-plugin-lib-inject-css";
 import { coverageConfigDefaults, defineConfig } from "vitest/config";
 
 export default defineConfig({
-  plugins: [react(), libInjectCss(), dts()],
+  plugins: [
+    react(),
+    libInjectCss(),
+    dts({
+      rollupTypes: true,
+      insertTypesEntry: true,
+      tsconfigPath: "./tsconfig.app.json",
+    }),
+  ],
   build: {
     lib: {
       entry: path.resolve(process.cwd(), "src/main.ts"),
