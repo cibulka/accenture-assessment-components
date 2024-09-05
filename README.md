@@ -89,3 +89,7 @@ Tests will generate coverage report both in terminal, as well as in a static HTM
 ```
 npm run test
 ```
+
+## 🧔‍♂️ Made by
+
+Coded by **Petr Cibulka**. [Check my website](https://www.cibulka.codes) or [play Tetris](https://www.cibulka.codes/tetris), my open-source project. 😊
