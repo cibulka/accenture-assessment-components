@@ -12,4 +12,14 @@ describe("<Checkbox />", () => {
     render(<Checkbox label={text} />);
     expect(screen.getByText(text)).toBeInTheDocument();
   });
+  it("renders Checkbox with error", () => {
+    render(<Checkbox label={text} error />);
+    expect(screen.getByText(text)).toBeInTheDocument();
+  });
+  it("renders disabled Checkbox", () => {
+    render(<Checkbox label={text} disabled />);
+    const checkbox = screen.getByRole("checkbox");
+    console.log(checkbox);
+    expect(checkbox).toHaveAttribute("disabled");
+  });
 });
