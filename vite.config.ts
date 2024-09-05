@@ -38,7 +38,13 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       reporter: ["text", "html"],
-      exclude: [...coverageConfigDefaults.exclude, "./src/components/*/stories", "./src/*", "*.js"],
+      exclude: [
+        ...coverageConfigDefaults.exclude,
+        "./storybook-static/*",
+        "./src/components/*/stories",
+        "./src/*",
+        "*.js",
+      ],
     },
   },
 });
